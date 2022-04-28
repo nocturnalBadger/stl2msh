@@ -48,21 +48,21 @@ fn main() {
     writeln!(output_file, "vertices").unwrap();
     for vertex in mesh.vertices.iter() {
         writeln!(output_file, "{:.06}", vertex[0]).unwrap();
-        writeln!(output_file, "{:.06}", vertex[1]).unwrap();
         writeln!(output_file, "{:.06}", vertex[2]).unwrap();
+        writeln!(output_file, "{:.06}", vertex[1]).unwrap();
     }
 
     writeln!(output_file, "triangles").unwrap();
     for triangle in mesh.faces.iter() {
         writeln!(output_file, "{}", triangle.vertices[0]).unwrap();
-        writeln!(output_file, "{}", triangle.vertices[1]).unwrap();
         writeln!(output_file, "{}", triangle.vertices[2]).unwrap();
+        writeln!(output_file, "{}", triangle.vertices[1]).unwrap();
     }
 
     writeln!(output_file, "normals").unwrap();
     for triangle in mesh.faces.iter() {
         writeln!(output_file, "{:.16}", triangle.normal[0]).unwrap();
-        writeln!(output_file, "{:.16}", triangle.normal[1]).unwrap();
         writeln!(output_file, "{:.16}", triangle.normal[2]).unwrap();
+        writeln!(output_file, "{:.16}", triangle.normal[1]).unwrap();
     }
 }
